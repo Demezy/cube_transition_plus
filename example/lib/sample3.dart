@@ -50,7 +50,7 @@ class Sample3 extends StatelessWidget {
                             child: Text(
                               item.name.split('-').join('\n'),
                               textAlign: TextAlign.center,
-                              style: Theme.of(context).textTheme.title,
+                              style: Theme.of(context).textTheme.headline6,
                             ),
                           ),
                         ),

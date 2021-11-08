@@ -38,7 +38,7 @@ class Sample2 extends StatelessWidget {
                             ]),
                             child: Text(
                               item.name,
-                              style: Theme.of(context).textTheme.title,
+                              style: Theme.of(context).textTheme.headline6,
                             ),
                           ),
                         ),

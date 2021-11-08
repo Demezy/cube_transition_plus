@@ -20,8 +20,8 @@ class CubePageRoute extends PageRouteBuilder {
   final Color backgroundColor;
 
   CubePageRoute({
-    this.exitPage,
-    this.enterPage,
+    required this.exitPage,
+    required this.enterPage,
     this.backgroundColor = Colors.black,
     this.duration = const Duration(
       milliseconds: 500,
