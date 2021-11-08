@@ -1,3 +1,7 @@
+## [2.0.1]
+
+* Fixed path issue in `example`
+
 ## [2.0.0]
 
 * Support for null-safety
