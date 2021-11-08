@@ -20,7 +20,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  cube_transition:
+  cube_transition_plus:
     path: ../
 
 dev_dependencies:

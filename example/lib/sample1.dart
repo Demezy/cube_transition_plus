@@ -1,4 +1,4 @@
-import 'package:cube_transition/cube_transition.dart';
+import 'package:cube_transition_plus/cube_transition_plus.dart';
 import 'package:flutter/material.dart';
 
 class Sample1 extends StatelessWidget {
@@ -9,7 +9,7 @@ class Sample1 extends StatelessWidget {
         title: Text('Navigator Cube Transition'),
       ),
       body: Center(
-        child: RaisedButton(
+        child: TextButton(
           child: Text('Next Page'),
           onPressed: () {
             Navigator.of(context).push(

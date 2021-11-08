@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:cube_transition/cube_transition.dart';
+import 'package:cube_transition_plus/cube_transition_plus.dart';
 import 'package:flutter/material.dart';
 import 'data.dart';
 

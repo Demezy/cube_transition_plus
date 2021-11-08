@@ -3,8 +3,8 @@ class Place {
   final String url;
 
   const Place({
-    required this.name,
-    required this.url,
+    this.name,
+    this.url,
   });
 }
 
