@@ -83,20 +83,31 @@ class CubePageView extends StatefulWidget {
 }
 
 class _CubePageViewState extends State<CubePageView> {
-  final _pageNotifier = ValueNotifier(0.0);
+  late final ValueNotifier<double> _pageNotifier;
   late PageController _pageController;
 
   void _listener() {
-    _pageNotifier.value = _pageController.page ?? 0;
+    _pageNotifier.value = _pageController.page ?? widget.startPage.toDouble();
   }
 
   @override
   void initState() {
     super.initState();
-    _pageController = widget.controller ?? PageController(initialPage: widget.startPage);
+    _pageController = widget.controller ?? PageController();
+    _pageNotifier = ValueNotifier(widget.startPage.toDouble());
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _pageController.addListener(_listener);
     });
+  }
+
+  @override
+  void didChangeDependencies() {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (_pageController.hasClients)
+        _pageController.jumpToPage(widget.startPage);
+    });
+
+    super.didChangeDependencies();
   }
 
   @override
