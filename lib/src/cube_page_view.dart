@@ -113,7 +113,9 @@ class _CubePageViewState extends State<CubePageView> {
   @override
   void dispose() {
     _pageController.removeListener(_listener);
-    _pageController.dispose();
+
+    /// if lifetime of the controller is not managed by the user, dispose it
+    if (widget.controller == null) _pageController.dispose();
     _pageNotifier.dispose();
     super.dispose();
   }
